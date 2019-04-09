@@ -29,6 +29,7 @@ public class MenuPausa : MonoBehaviour
     public void Pausar()
     {
         transform.Find("Pausa").gameObject.SetActive(true);
+        transform.Find("BotonReiniciar").gameObject.SetActive(false);
         Time.timeScale = 0.0f;
         pausado = true;
     }
@@ -36,6 +37,7 @@ public class MenuPausa : MonoBehaviour
     public void Continuar()
     {
         transform.Find("Pausa").gameObject.SetActive(false);
+        transform.Find("BotonReiniciar").gameObject.SetActive(true);x
         Time.timeScale = 1.0f;
         pausado = false;
     }
